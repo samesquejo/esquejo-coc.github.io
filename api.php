@@ -1,7 +1,14 @@
 <?php
-    require_once('./CocApi.php');
+    require './CocApi.php';
 
     $newCocApi = new CocApi();
 
-    print_r($newCocApi->getClan());
-    
+    $searchCategory = $_GET['get'];
+
+    if ($searchCategory == 'clan') {
+        $newCocApi->getClan();
+    }
+
+    if ($searchCategory == 'clanDetails') {
+        $newCocApi->getClanDetails();
+    }

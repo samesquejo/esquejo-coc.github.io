@@ -1,18 +1,18 @@
 <template>
-    <header-layout />
     <body-layout />
+    <sidebar-layout />
 </template>
 
 <script>
 import { mapActions } from 'vuex'
-import HeaderLayout from './components/HeaderLayout'
 import BodyLayout from './components/BodyLayout'
+import SidebarLayout from './components/SidebarLayout'
 
 export default {
     name: 'AppMain',
     components: {
-        HeaderLayout,
-        BodyLayout
+        BodyLayout,
+        SidebarLayout
     },
     mounted() {
         const location = window.location

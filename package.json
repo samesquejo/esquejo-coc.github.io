@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "tailwind": "npx tailwindcss -i ./src/css/input.css -o ./dist/css/main.css --watch",
     "watch": "npm run development -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

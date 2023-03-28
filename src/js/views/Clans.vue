@@ -1,34 +1,25 @@
 <template>
-    <div class="container">
-        <div class="">
-            <h2>Clans</h2>
-        </div>
-        <div class="">
-            <table>
-                <thead>
-                    <tr><th>123</th></tr>
-                </thead>
-            </table>
-        </div>
+    <div class="flex relative">
+        <ClanList :class="[ getIsClanView ? 'w-8/12' : 'w-full' ]" />
+        <ClanDetails class="overflow-hidden sticky top-0 h-full" :class="[ getIsClanView ? 'w-4/12' : 'w-0' ]" />
     </div>
 </template>
 
 <script>
-import axios from '../helpers/axios'
-import appConfig from '../config'
+import { mapGetters } from 'vuex'
+import ClanList from '../components/ClanList'
+import ClanDetails from '../components/ClanDetails'
 
 export default {
     name: 'Clans',
-    mounted() {
-        this.getClans()
+    components: {
+        ClanList,
+        ClanDetails
     },
-    methods: {
-        async getClans() {
-            const clans = await axios.get(`http://coc.test/api.php`)
-                .then( res => {
-                    console.log(res)
-                })
-        }
-    }
+    computed: {
+        ...mapGetters([
+            'getIsClanView'
+        ])
+    },
 }
 </script>

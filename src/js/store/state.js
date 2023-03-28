@@ -1,3 +1,8 @@
 export default {
-    page: '/'
+    page: '/',
+    pageName: 'Dashboard',
+    clans: [],
+    isClanView: false,
+    clanDetails: {},
+    isDetailsLoading: false
 }

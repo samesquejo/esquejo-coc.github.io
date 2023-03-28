@@ -3,9 +3,9 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   mode: "jit",
   content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
+    "./*.php",
+    "./src/**/*.js",
+    "./src/**/*.vue",
   ],
   presets: [],
   darkMode: "class",
