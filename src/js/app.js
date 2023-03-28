@@ -12,12 +12,12 @@ const app = createApp({
     },
     data: () => ({
     }),
-    mounted() {
-        const location = window.location
-        if (location.origin != 'http://coc.test') {
-            location.href = "http://coc.test"
-        }
-    }
+    // mounted() {
+    //     const location = window.location
+    //     if (location.origin != 'http://coc.test') {
+    //         location.href = "http://coc.test"
+    //     }
+    // }
 })
 
 // app.use(routes)

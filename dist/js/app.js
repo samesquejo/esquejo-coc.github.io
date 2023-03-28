@@ -19850,13 +19850,13 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   },
   data: function data() {
     return {};
-  },
-  mounted: function mounted() {
-    var location = window.location;
-    if (location.origin != 'http://coc.test') {
-      location.href = "http://coc.test";
-    }
   }
+  // mounted() {
+  //     const location = window.location
+  //     if (location.origin != 'http://coc.test') {
+  //         location.href = "http://coc.test"
+  //     }
+  // }
 });
 
 // app.use(routes)
