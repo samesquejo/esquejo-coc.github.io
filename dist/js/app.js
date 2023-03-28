@@ -18142,7 +18142,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
               _this.searchStart = true;
               _this.isLoading = true;
               _context.next = 4;
-              return _helpers_axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("api.php?get=clan&search=".concat(_this.search)).then(function (req) {
+              return _helpers_axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("https://api.clashofclans.com/v1/clans?name=".concat(_this.search)).then(function (req) {
                 var data = req.data;
                 if (data.items && data.items.length) {
                   _this.setClans(data.items);
@@ -18170,7 +18170,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
               _this2.setIsClanView(true);
               newTag = tag.replace('#', '');
               _context2.next = 5;
-              return _helpers_axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("api.php?get=clanDetails&tag=".concat(newTag)).then(function (req) {
+              return _helpers_axios__WEBPACK_IMPORTED_MODULE_0__["default"].get("https://api.clashofclans.com/v1/clans/%23".concat(newTag)).then(function (req) {
                 var data = req.data;
                 _this2.setIsDetailsLoading(false);
                 _this2.setClanDetails(data);

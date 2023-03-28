@@ -197,7 +197,7 @@ export default {
         async searchClan() {
             this.searchStart = true
             this.isLoading = true
-            await axios.get(`api.php?get=clan&search=${this.search}`)
+            await axios.get(`https://api.clashofclans.com/v1/clans?name=${this.search}`)
                 .then( req => {
                     const { data } = req
                     if (data.items && data.items.length) {
@@ -214,7 +214,7 @@ export default {
             this.setIsClanView(true)
             const newTag = tag.replace('#','')
 
-            await axios.get(`api.php?get=clanDetails&tag=${newTag}`)
+            await axios.get(`https://api.clashofclans.com/v1/clans/%23${newTag}`)
                 .then( req => {
                     const { data } = req
                     this.setIsDetailsLoading(false)
