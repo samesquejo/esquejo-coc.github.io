@@ -191,7 +191,8 @@ export default {
         ...mapActions([
             'setClans',
             'setIsClanView',
-            'setIsDetailsLoading'
+            'setIsDetailsLoading',
+            'setClanDetails'
         ]),
         async searchClan() {
             this.searchStart = true
@@ -217,6 +218,7 @@ export default {
                 .then( req => {
                     const { data } = req
                     this.setIsDetailsLoading(false)
+                    this.setClanDetails(data)
                 })
         }
     }
